@@ -7,5 +7,5 @@ import './auth.dart';
 
 void main(){
   auth.handleSignIn();
-  runApp(Payment());
+  runApp(HomeScreen());
 }

@@ -30,6 +30,7 @@ dependencies:
   file_picker:
   firebase_storage:
   image_picker:
+  google_maps_flutter:
 
 
 
