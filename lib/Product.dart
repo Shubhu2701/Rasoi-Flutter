@@ -5,6 +5,7 @@ var descriptionBox;
 var sellerInfo;
 var review;
 var productName;
+var buyButton;
 
 class Product extends StatelessWidget{
 
@@ -14,7 +15,7 @@ class Product extends StatelessWidget{
       home: new Scaffold(
         body: new Container(
           margin: const EdgeInsets.all(2.0),
-          alignment: Alignment.center,
+          alignment: Alignment.centerLeft,
           child: new Column(
             children: <Widget>[
               new Container(
@@ -70,12 +71,10 @@ class Product extends StatelessWidget{
           )
 
         ),
-        bottomNavigationBar: BottomNavigationBar(
-          items: <BottomNavigationBarItem>[
-            BottomNavigationBarItem(icon: new Icon(Icons.add_shopping_cart),title: new Text("Order Now")),
-          ],
-          
-          
+        floatingActionButton: FloatingActionButton(
+          child: Icon(Icons.add_shopping_cart),
+          onPressed: (buyButton),
+        ),
         ),
           
         ),

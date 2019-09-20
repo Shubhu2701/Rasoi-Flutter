@@ -1,5 +1,4 @@
-import 'package:flutter/cupertino.dart';
-import 'package:rasoi/Product.dart';
+import 'package:flutter/cupertino.dart';;
 import './product.dart';
 
 void main() => runApp(Product());
