@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import './Product.dart';
 import './payment.dart';
 
-class OrderSummary extends StatelessWidget{
+class Order123 extends StatelessWidget{
   @override
   Widget build(BuildContext context){
     return MaterialApp(

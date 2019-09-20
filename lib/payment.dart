@@ -21,7 +21,7 @@ class Payment extends StatelessWidget {
             shape: StadiumBorder(),
             onPressed: () {
                   Navigator.push(context, MaterialPageRoute(builder: (context){
-                    return OrderSummary();
+                    return Order123();
                   }));
 
             },
@@ -34,7 +34,7 @@ class Payment extends StatelessWidget {
             shape: StadiumBorder(),
              onPressed: () {
                   Navigator.push(context, MaterialPageRoute(builder: (context){
-                    return OrderSummary();
+                    return Order123();
                   }));
 
             },
@@ -47,7 +47,7 @@ class Payment extends StatelessWidget {
             shape: StadiumBorder(),
              onPressed: () {
                   Navigator.push(context, MaterialPageRoute(builder: (context){
-                    return OrderSummary();
+                    return Order123();
                   }));
             },
             child:  new Text("Bhim UPI", style: TextStyle(fontFamily: 'Manjari', fontSize: 22.0),),
