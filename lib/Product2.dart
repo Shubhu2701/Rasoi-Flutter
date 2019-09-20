@@ -2,11 +2,11 @@ import 'package:flutter/material.dart';
 import './payment.dart';
 import './order123.dart';
 
-var price;
-var descriptionBox;
-var sellerInfo;
-var review;
-var productName;
+var price = "₹69";
+var descriptionBox = "Handmade delicious Butter Chicken at low price";
+var sellerInfo = "Akshit Garg";
+var review = "Very tasty";
+var productName = "Butter Chicken";
 var buyButton;
 var imageSource;
 
@@ -17,6 +17,7 @@ class Product2 extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
     return new MaterialApp(
+      debugShowCheckedModeBanner: false,
         home: new Scaffold(
           appBar: AppBar(
             elevation: 0.0,
