@@ -3,6 +3,14 @@ import './Product.dart';
 import './payment.dart';
 
 class Order123 extends StatelessWidget{
+
+  String productName;
+  String price;
+//  Order123(String productName,String price){
+//    this.productName = productName;
+//    this.price = price;
+//  }
+
   @override
   Widget build(BuildContext context){
     return MaterialApp(

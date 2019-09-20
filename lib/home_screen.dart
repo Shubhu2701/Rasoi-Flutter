@@ -1,9 +1,8 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import "package:flutter/material.dart";
 import 'package:flutter/widgets.dart';
 import 'package:rasoi/Dish.dart';
 import './dishcard.dart';
-import 'database_demo.dart';
-import 'package:ansicolor/ansicolor.dart';
 
 class HomeScreen extends StatelessWidget {
   var username, mail;
@@ -12,18 +11,6 @@ class HomeScreen extends StatelessWidget {
   HomeScreen(username, mail) {
     this.username = username;
     this.mail = mail;
-    List<String> strings ;
-    strings.add("aka");
-    print12(strings);
-
-    database_demo db = database_demo();
-    dishes = database_demo.getDishes();
-    strings.add(dishes[0].name);
-    print12(strings);
-
-    print('\x1B[94m' + dishes[0].name + '\x1B[0m');
-    debugPrint(dishes[0].name);
-
   }
 
   @override
@@ -206,12 +193,12 @@ class HomeScreen extends StatelessWidget {
         ),
         body: Material(
           color: Colors.white,
-          child: ListView(
-            children: <Widget>[
-              Container(
-                padding: EdgeInsets.only(top: 30.0),
-              ),
+          child: StreamBuilder<QuerySnapshot>(
+            stream: Firestore.instance.collection('dishes').snapshots(),
+            builder: (context, snapshot){
+              if (!snapshot.hasData) return LinearProgressIndicator();
 
+<<<<<<< HEAD
               Card(
                 child: Container(
                   width: 200,
@@ -233,25 +220,24 @@ class HomeScreen extends StatelessWidget {
                   5),
 
             ],
+=======
+              return ListView.builder(
+                itemCount: snapshot.data.documents.length,
+                itemBuilder: (context, index) {
+                return DishCard(
+                  snapshot.data.documents[index].data["pic"],
+                    snapshot.data.documents[index].data["name"],
+                    snapshot.data.documents[index].data["price"],
+                    snapshot.data.documents[index].data["rating"],
+                    snapshot.data.documents[index].documentID
+                );
+              },);
+            },
+>>>>>>> 89107075cd58efbf6e70733385fc76a3b8968abe
           ),
         ),
       ),
     );
   }
 
-  void print12(List<String> arguments) {
-    AnsiPen greenPen = AnsiPen()..green();
-    AnsiPen greenBackGroundPen = AnsiPen()..green(bg: true);
-
-    AnsiPen redTextBlueBackgroundPen = AnsiPen()..blue(bg: true)..red();
-
-    AnsiPen boldPen = AnsiPen()..white(bold: true);
-
-    AnsiPen someColorPen = AnsiPen()..rgb(r: .5, g: .2, b: .4);
-
-    print(greenPen("Hulk") + " " + greenBackGroundPen("SMASH!!!"));
-    print(redTextBlueBackgroundPen("Spider-Man!!!") + " " + boldPen("Far From Home!!!"));
-
-    print(someColorPen("Chameleon"));
-  }
 }
