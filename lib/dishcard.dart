@@ -2,13 +2,14 @@ import 'package:flutter/material.dart';
 import './Product.dart';
 
 class DishCard extends StatelessWidget {
-  var url, dish, price, rating;
+  var url, dish, price, rating,docid;
 
-  DishCard(url, dish, price, rating) {
+  DishCard(url, dish, price, rating,docid) {
     this.url = url;
     this.dish = dish;
     this.price = price;
     this.rating = rating;
+    this.docid = docid;
   }
 
   @override
@@ -16,8 +17,8 @@ class DishCard extends StatelessWidget {
     // TODO: implement build
     return GestureDetector(
       onTap: (){
-        print("Tapped");
-        Navigator.of(context).push(MaterialPageRoute(builder: (context)=> Product(),));
+        print("Tapped listview");
+        Navigator.of(context).push(MaterialPageRoute(builder: (context)=> Product(docid),));
       },
       
         child: Card(
