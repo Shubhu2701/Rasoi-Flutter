@@ -18,7 +18,7 @@ class DishCard extends StatelessWidget {
       onTap: (){
         print("Tapped");
         Navigator.of(context).push(MaterialPageRoute(builder: (context)=> Product(),));
-      },);
+      },
       
         child: Card(
       elevation: 0.0,
@@ -86,8 +86,8 @@ class DishCard extends StatelessWidget {
         ],
       ),
 
+    ),
     );
-
   }
 
 }

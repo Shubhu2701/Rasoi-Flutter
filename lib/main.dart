@@ -7,5 +7,5 @@ import './auth.dart';
 
 void main(){
   auth.handleSignIn();
-  runApp(HomeScreen());
+  runApp(HomeScreen("Shubhu" , "shubhankermehta27@gmail.com"));
 }
