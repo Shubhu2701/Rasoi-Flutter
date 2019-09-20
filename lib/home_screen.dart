@@ -211,7 +211,7 @@ class HomeScreen extends StatelessWidget {
               Container(
                 padding: EdgeInsets.only(top: 30.0),
               ),
-<<<<<<< HEAD
+
               Card(
                 child: Container(
                   width: 200,
@@ -224,14 +224,14 @@ class HomeScreen extends StatelessWidget {
                   
                 ),
               ),
-=======
+
 
               DishCard(
                   "https://cafedelites.com/wp-content/uploads/2019/01/Butter-Chicken-IMAGE-27.jpg",
                   "Butter Chicken",
                   "₹69",
                   5),
->>>>>>> a9f13ecc9c5b26ce40b776c16ee5db5e97aa261b
+
             ],
           ),
         ),
