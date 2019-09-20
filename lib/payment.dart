@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import './ordersummary.dart';
+import './map.dart';
 
 
 class Payment extends StatelessWidget {
