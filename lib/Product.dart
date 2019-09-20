@@ -6,8 +6,19 @@ var sellerInfo;
 var review;
 var productName;
 var buyButton;
+var abc;
 
 class Product extends StatelessWidget{
+
+
+
+   paymentSheet(context){
+    showModalBottomSheet(builder: (BuildContext context) {
+      return Container();
+    }, context: context);
+  }
+
+
 
   @override
   Widget build(BuildContext context) {
@@ -15,7 +26,6 @@ class Product extends StatelessWidget{
       home: new Scaffold(
         body: new Container(
           margin: const EdgeInsets.all(2.0),
-          alignment: Alignment.centerLeft,
           child: new Column(
             children: <Widget>[
               new Container(
@@ -28,7 +38,7 @@ class Product extends StatelessWidget{
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: <Widget>[
                   new Text("$productName", textDirection: TextDirection.ltr,
-                            style: new TextStyle(fontFamily: 'Manjari', fontWeight: FontWeight.w500,fontSize: 50.0)),
+                            style: new TextStyle(fontFamily: 'Manjari', fontWeight: FontWeight.w500,fontSize: 40.0)),
                   new Text("Rating: 4.5"),
                   new Icon(Icons.star)
                 ],
@@ -36,14 +46,14 @@ class Product extends StatelessWidget{
               ),
               new Container(
                 child: new Text("Price : $price", textDirection: TextDirection.ltr,
-                        style: new TextStyle(fontFamily: 'Manjari',fontWeight: FontWeight.w300,fontSize: 35.0)),
+                        style: new TextStyle(fontFamily: 'Manjari',fontWeight: FontWeight.w300,fontSize: 25.0)),
               ),
               new Container(
                 margin: const EdgeInsets.all(10.0),
                 child: new Column(
                   children: <Widget>[
-                    new Text("Description: ", textDirection: TextDirection.ltr, style: TextStyle(fontFamily: 'Manjiri', fontWeight: FontWeight.w300,fontSize: 35.0)),
-                    new Text("$descriptionBox", textDirection: TextDirection.ltr, style: TextStyle(fontFamily: 'Manjiri', fontSize: 18.0))
+                    new Text("Description: ", textDirection: TextDirection.ltr, style: TextStyle(fontFamily: 'Manjiri', fontWeight: FontWeight.w300,fontSize: 22.0)),
+                    new Text("$descriptionBox", textDirection: TextDirection.ltr, style: TextStyle(fontFamily: 'Manjiri', fontSize: 16.0))
                   ],
                 ),
               ),
@@ -51,8 +61,8 @@ class Product extends StatelessWidget{
                 margin: const EdgeInsets.all(10.0),
                  child: new Column(
                   children: <Widget>[
-                    new Text("Seller info: ", textDirection: TextDirection.ltr, style: TextStyle(fontFamily: 'Manjiri', fontWeight: FontWeight.w300,fontSize: 35.0)),
-                    new Text("$sellerInfo", textDirection: TextDirection.ltr, style: TextStyle(fontFamily: 'Manjiri', fontSize: 18.0))
+                    new Text("Seller info: ", textDirection: TextDirection.ltr, style: TextStyle(fontFamily: 'Manjiri', fontWeight: FontWeight.w300,fontSize: 22.0)),
+                    new Text("$sellerInfo", textDirection: TextDirection.ltr, style: TextStyle(fontFamily: 'Manjiri', fontSize: 16.0))
                   ],
                 )
               ),
@@ -60,8 +70,8 @@ class Product extends StatelessWidget{
                 margin: const EdgeInsets.all(10.0),
                  child: new Column(
                   children: <Widget>[
-                    new Text("Review: ", textDirection: TextDirection.ltr, style: TextStyle(fontFamily: 'Manjiri', fontWeight: FontWeight.w700,fontSize: 35.0)),
-                    new Text("$review", textDirection: TextDirection.ltr, style: TextStyle(fontFamily: 'Manjiri', fontSize: 18.0))
+                    new Text("Review: ", textDirection: TextDirection.ltr, style: TextStyle(fontFamily: 'Manjiri', fontWeight: FontWeight.w700,fontSize: 22.0)),
+                    new Text("$review", textDirection: TextDirection.ltr, style: TextStyle(fontFamily: 'Manjiri', fontSize: 16.0))
                   ],
                 )
               ),
@@ -71,20 +81,28 @@ class Product extends StatelessWidget{
           )
 
         ),
-        floatingActionButton: FloatingActionButton(
-          child: Icon(Icons.add_shopping_cart),
-          onPressed: (buyButton),
-        ),
-        ),
-          
-      
-     );
-}
-}
+        floatingActionButton: FloatingActionButton.extended(
+          icon: Icon(Icons.add_shopping_cart),
+          label: Text("Buy now"), 
+          onPressed: () {
+            paymentSheet(context);
+                        }
+                    )
+                   )
+                  );
+                      }
+            }
+
  
+
+
+
 class Picture extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
     return new Image.network('src');
   }
 }
+
+
+
