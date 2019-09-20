@@ -77,8 +77,8 @@ class Product extends StatelessWidget{
         ),
         ),
           
-        ),
-       );
+      
+     );
 }
 }
  
