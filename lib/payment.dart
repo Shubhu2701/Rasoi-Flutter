@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import './ordersummary.dart';
 
 
 class Payment extends StatelessWidget {
@@ -18,7 +19,12 @@ class Payment extends StatelessWidget {
           padding: EdgeInsets.only(top: 35.0),
           child: MaterialButton(
             shape: StadiumBorder(),
-            onPressed: (){},
+            onPressed: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (context){
+                    return Map(); 
+                  }));
+
+            },
             child:  new Text("Google Pay", style: TextStyle(fontFamily: 'Manjari', fontSize: 22.0),),
           ),
         ),
@@ -26,7 +32,12 @@ class Payment extends StatelessWidget {
         new Container(
           child: MaterialButton(
             shape: StadiumBorder(),
-            onPressed: (){},
+             onPressed: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (context){
+                    return Map();
+                  }));
+
+            },
             child:  new Text("Paytm", style: TextStyle(fontFamily: 'Manjari', fontSize: 22.0),),
           ),
         ),
@@ -34,7 +45,11 @@ class Payment extends StatelessWidget {
         new Container(
           child: MaterialButton(
             shape: StadiumBorder(),
-            onPressed: (){},
+             onPressed: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (context){
+                    return Map();
+                  }));
+            },
             child:  new Text("Bhim UPI", style: TextStyle(fontFamily: 'Manjari', fontSize: 22.0),),
           ),
         )
