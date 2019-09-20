@@ -10,9 +10,7 @@ class MyFlutterApp extends StatelessWidget {
       title: "Rasoi",
       home: Scaffold(
         drawer: Drawer(
-            child: ListView(
-          children: <Widget>[
-            Container(
+            child: Container(
               color: Colors.blueGrey.shade800,
               margin: EdgeInsets.only(bottom: 650.0),
               child: ListView(
@@ -27,31 +25,49 @@ class MyFlutterApp extends StatelessWidget {
                         style: TextStyle(
                           fontFamily: 'Manjari',
                           fontWeight: FontWeight.w400,
-                          fontSize: 50.0,
+                          fontSize: 33.0,
                           color: Colors.white,
                         )),
                   ),
-                  //  Container(margin: const EdgeInsets.only(top:20.0, bottom: 20.0)),
-                ],
+                  Container(margin: const EdgeInsets.all(20.0)),
+          ListTile(
+            leading: Icon(
+              Icons.history,
+              size: 45.0,
+            ),
+            title: Text(
+              "Order History",
+              style: TextStyle(
+                fontFamily: 'Manjari',
+                fontWeight: FontWeight.w400,
+                fontSize: 30.0,
+                color: Colors.blueGrey.shade800,
               ),
             ),
-            ListTile(
-              leading: Icon(
-                Icons.history,
-                size: 45.0,
+          ) ],
               ),
-              title: Text(
-                "Order History",
-                style: TextStyle(
-                  fontFamily: 'Manjari',
-                  fontWeight: FontWeight.w400,
-                  fontSize: 30.0,
-                  color: Colors.blueGrey.shade800,
-                ),
-              ),
-            )
-          ],
-        )),
+            ),
+         /*  child: ListView(
+             children: <Widget>[
+               ListTile(
+                 leading: Icon(
+                   Icons.history,
+                   size: 45.0,
+                 ),
+                 title: Text(
+                   "Order History",
+                   style: TextStyle(
+                     fontFamily: 'Manjari',
+                     fontWeight: FontWeight.w400,
+                     fontSize: 30.0,
+                     color: Colors.blueGrey.shade800,
+                   ),
+                 ),
+               ),
+             ],
+           )*/
+
+        ),
         appBar: AppBar(
           title: Text(
             "Rasoi",
