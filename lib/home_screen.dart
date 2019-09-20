@@ -1,13 +1,29 @@
 import "package:flutter/material.dart";
 import 'package:flutter/widgets.dart';
+import 'package:rasoi/Dish.dart';
 import './dishcard.dart';
+import 'database_demo.dart';
+import 'package:ansicolor/ansicolor.dart';
 
 class HomeScreen extends StatelessWidget {
   var username, mail;
+  List<Dish> dishes;
 
   HomeScreen(username, mail) {
     this.username = username;
     this.mail = mail;
+   /* List<String> strings ;
+    strings.add("aka");
+    print12(strings);
+
+    database_demo db = database_demo();
+    dishes = database_demo.getDishes();
+    strings.add(dishes[0].name);
+    print12(strings);
+
+    print('\x1B[94m' + dishes[0].name + '\x1B[0m');
+    debugPrint(dishes[0].name);*/
+
   }
 
   @override
@@ -195,21 +211,32 @@ class HomeScreen extends StatelessWidget {
               Container(
                 padding: EdgeInsets.only(top: 30.0),
               ),
-              Card(
-                child: Container(
-                  width: 200,
-                  height: 200,
-                  child: DishCard(
-                      "https://cafedelites.com/wp-content/uploads/2019/01/Butter-Chicken-IMAGE-27.jpg",
-                      "Butter Chicken",
-                      "₹69",
-                      5),
-                ),
-              ),
+
+              DishCard(
+                  "https://cafedelites.com/wp-content/uploads/2019/01/Butter-Chicken-IMAGE-27.jpg",
+                  "Butter Chicken",
+                  "₹69",
+                  5),
             ],
           ),
         ),
       ),
     );
+  }
+
+  void print12(List<String> arguments) {
+    AnsiPen greenPen = AnsiPen()..green();
+    AnsiPen greenBackGroundPen = AnsiPen()..green(bg: true);
+
+    AnsiPen redTextBlueBackgroundPen = AnsiPen()..blue(bg: true)..red();
+
+    AnsiPen boldPen = AnsiPen()..white(bold: true);
+
+    AnsiPen someColorPen = AnsiPen()..rgb(r: .5, g: .2, b: .4);
+
+    print(greenPen("Hulk") + " " + greenBackGroundPen("SMASH!!!"));
+    print(redTextBlueBackgroundPen("Spider-Man!!!") + " " + boldPen("Far From Home!!!"));
+
+    print(someColorPen("Chameleon"));
   }
 }
