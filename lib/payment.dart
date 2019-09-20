@@ -6,17 +6,14 @@ class Payment extends StatelessWidget {
   Widget build(BuildContext context){
     return MaterialApp(
       home: new Scaffold(
+          appBar: AppBar(
+            elevation: 0.0,
+            title: new Text("Payment Methods",style: TextStyle(fontFamily: 'Manjari', fontWeight: FontWeight.w400, fontSize: 30.0,color: Colors.black),),
+            backgroundColor: Colors.white,
+        ),
       body: new Container(
           child: new Column(
             children: <Widget>[ 
-          new Container(
-            margin: const EdgeInsets.all(10.0),
-            alignment: Alignment.center,  
-            child: new Text("Payment Method", textDirection: TextDirection.ltr,style: TextStyle(fontFamily: 'Manjari', fontWeight: FontWeight.w800,fontSize: 50.0)),
-
-        ),
-        
-        new Divider(),
         new Container(
           child: MaterialButton(
             shape: StadiumBorder(),
