@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "763974131943",
+    "firebase_url": "https://cloud9app-3c4ea.firebaseio.com",
+    "project_id": "cloud9app-3c4ea",
+    "storage_bucket": "cloud9app-3c4ea.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:763974131943:android:08f27c08179d4b14198242",
+        "android_client_info": {
+          "package_name": "com.example.rasoi"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "763974131943-jpslrfnkeibbcsmh8gd2357gq02qsgu8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCHTHTC8oTw-bQTVIdzjwJBvymATQDKF_Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "763974131943-jpslrfnkeibbcsmh8gd2357gq02qsgu8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
