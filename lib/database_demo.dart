@@ -119,6 +119,7 @@ import 'Dish.dart';
   }
 
   static List<Dish> getDishes(){
+
   List<Dish> dishes;
   Firestore.instance
       .collection('dishes')

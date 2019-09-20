@@ -12,7 +12,7 @@ class HomeScreen extends StatelessWidget {
   HomeScreen(username, mail) {
     this.username = username;
     this.mail = mail;
-   /* List<String> strings ;
+    List<String> strings ;
     strings.add("aka");
     print12(strings);
 
@@ -22,7 +22,7 @@ class HomeScreen extends StatelessWidget {
     print12(strings);
 
     print('\x1B[94m' + dishes[0].name + '\x1B[0m');
-    debugPrint(dishes[0].name);*/
+    debugPrint(dishes[0].name);
 
   }
 
