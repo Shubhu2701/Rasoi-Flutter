@@ -15,6 +15,7 @@ class Payment extends StatelessWidget {
           child: new Column(
             children: <Widget>[ 
         new Container(
+          padding: EdgeInsets.only(top: 35.0),
           child: MaterialButton(
             shape: StadiumBorder(),
             onPressed: (){},
