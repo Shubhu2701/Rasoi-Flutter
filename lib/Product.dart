@@ -15,11 +15,6 @@ class Product extends StatelessWidget{
   Widget build(BuildContext context) {
     return new MaterialApp(
         home: new Scaffold(
-          appBar: AppBar(
-            elevation: 0.0,
-            title: new Text("Product Info",style: TextStyle(fontFamily: 'Manjari', fontWeight: FontWeight.w400, fontSize: 30.0,color: Colors.black),),
-            backgroundColor: Colors.white,
-          ),
             body: new Container(
                 margin: const EdgeInsets.all(2.0),
                 child: new Column(
@@ -87,7 +82,7 @@ class Product extends StatelessWidget{
                 icon: Icon(Icons.add_shopping_cart),
                 label: Text("Buy now"),
                 onPressed: () {
-                  Navigator.push(context, MaterialPageRoute(builder: (context){
+                  Navigator.push(context, MaterialPageRoute(builder: (context) {
                     return Payment();
                   }));
                 }

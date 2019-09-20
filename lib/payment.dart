@@ -21,7 +21,7 @@ class Payment extends StatelessWidget {
             shape: StadiumBorder(),
             onPressed: () {
                   Navigator.push(context, MaterialPageRoute(builder: (context){
-                    return Order123(); 
+                    return Order123();
                   }));
 
             },
