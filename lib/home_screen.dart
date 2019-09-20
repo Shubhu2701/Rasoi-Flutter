@@ -4,10 +4,12 @@ import './dishcard.dart';
 
 class HomeScreen extends StatelessWidget {
   var username, mail;
-  HomeScreen(username, mail){
-    this.username= username;
-    this.mail=mail;
+
+  HomeScreen(username, mail) {
+    this.username = username;
+    this.mail = mail;
   }
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -197,7 +199,11 @@ class HomeScreen extends StatelessWidget {
                 child: Container(
                   width: 200,
                   height: 200,
-                  child: DishCard("https://cafedelites.com/wp-content/uploads/2019/01/Butter-Chicken-IMAGE-27.jpg", "Butter Chicken", "₹69", 5),
+                  child: DishCard(
+                      "https://cafedelites.com/wp-content/uploads/2019/01/Butter-Chicken-IMAGE-27.jpg",
+                      "Butter Chicken",
+                      "₹69",
+                      5),
                 ),
               ),
             ],
@@ -207,4 +213,3 @@ class HomeScreen extends StatelessWidget {
     );
   }
 }
-
