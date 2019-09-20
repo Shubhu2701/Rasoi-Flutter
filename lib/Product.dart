@@ -71,21 +71,15 @@ class Product extends StatelessWidget{
 
         ),
         bottomNavigationBar: BottomNavigationBar(
-          currentIndex: _selectedPage,
-          onTap: (int index){
-            setState((){
-              _selectedPage = cu
-            },),
-          },
           items: <BottomNavigationBarItem>[
-
+            BottomNavigationBarItem(icon: new Icon(Icons.add_shopping_cart),title: new Text("Order Now")),
           ],
           
+          
         ),
           
         ),
-       )
-      );
+       );
 }
 }
  
