@@ -53,16 +53,17 @@ class HomeScreen extends StatelessWidget {
                     color: Colors.black,
                   ),
                 ),
+                onTap: () {},
               ),
               new Divider(),
               ListTile(
                 leading: Icon(
-                  Icons.info_outline,
+                  Icons.library_books,
                   size: 30.0,
                   color: Colors.black,
                 ),
                 title: Text(
-                  "About Us",
+                  "Blog",
                   style: TextStyle(
                     fontFamily: 'Manjari',
                     fontWeight: FontWeight.w400,
@@ -70,6 +71,25 @@ class HomeScreen extends StatelessWidget {
                     color: Colors.black,
                   ),
                 ),
+                onTap: () {},
+              ),
+              new Divider(),
+              ListTile(
+                leading: Icon(
+                  Icons.insert_drive_file,
+                  size: 30.0,
+                  color: Colors.black,
+                ),
+                title: Text(
+                  "Recipies",
+                  style: TextStyle(
+                    fontFamily: 'Manjari',
+                    fontWeight: FontWeight.w400,
+                    fontSize: 25.0,
+                    color: Colors.black,
+                  ),
+                ),
+                onTap: () {},
               ),
               new Divider(),
               ListTile(
@@ -87,18 +107,32 @@ class HomeScreen extends StatelessWidget {
                     color: Colors.black,
                   ),
                 ),
+                onTap: () {},
               ),
               new Divider(),
               ListTile(
-                contentPadding: EdgeInsets.only(top: 205.0, left: 16.0),
+                leading: Icon(
+                  Icons.info_outline,
+                  size: 30.0,
+                  color: Colors.black,
+                ),
+                title: Text(
+                  "About Us",
+                  style: TextStyle(
+                    fontFamily: 'Manjari',
+                    fontWeight: FontWeight.w400,
+                    fontSize: 25.0,
+                    color: Colors.black,
+                  ),
+                ),
+                onTap: () {},
               ),
               new Divider(),
               ListTile(
-
                 leading: Icon(
                   Icons.star,
                   size: 30.0,
-                  color: Colors.black,
+                  color: Colors.yellow,
                 ),
                 title: Text(
                   "Rate Us",
@@ -109,6 +143,7 @@ class HomeScreen extends StatelessWidget {
                     color: Colors.black,
                   ),
                 ),
+                onTap: () {},
               ),
               new Divider(),
               ListTile(
@@ -126,6 +161,7 @@ class HomeScreen extends StatelessWidget {
                     color: Colors.black,
                   ),
                 ),
+                onTap: () {},
               ),
             ],
           ),
@@ -147,6 +183,14 @@ class HomeScreen extends StatelessWidget {
         ),
         body: Material(
           color: Colors.white,
+          child: ListView(
+            children: <Widget>[
+              ListTile(
+                leading: Image.network("https://cafedelites.com/wp-content/uploads/2019/01/Butter-Chicken-IMAGE-27.jpg",),
+
+              ),
+            ],
+          ),
         ),
       ),
     );
