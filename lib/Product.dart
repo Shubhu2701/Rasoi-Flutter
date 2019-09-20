@@ -10,16 +10,6 @@ var abc;
 
 class Product extends StatelessWidget{
 
-
-
-   paymentSheet(context){
-    showModalBottomSheet(builder: (BuildContext context) {
-      return Container();
-    }, context: context);
-  }
-
-
-
   @override
   Widget build(BuildContext context) {
     return new MaterialApp(
@@ -84,14 +74,13 @@ class Product extends StatelessWidget{
         floatingActionButton: FloatingActionButton.extended(
           icon: Icon(Icons.add_shopping_cart),
           label: Text("Buy now"), 
-          onPressed: () {
-            paymentSheet(context);
-                        }
+          onPressed: () {}
                     )
                    )
                   );
                       }
             }
+
 
  
 

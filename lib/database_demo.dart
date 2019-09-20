@@ -1,6 +1,14 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import "package:flutter/material.dart";
 import "./profile.dart";
+import 'package:file_picker/file_picker.dart';
+import 'package:firebase_storage/firebase_storage.dart';
+import './auth.dart';
+import 'dart:io';
+import 'package:image_picker/image_picker.dart';
+
+
 
 class BookList extends StatelessWidget {
 
@@ -20,6 +28,60 @@ class BookList extends StatelessWidget {
        }
        ));
    return prof;
+ }
+ void putImage(String dishname) async{
+
+   final StorageReference storageRef =
+   FirebaseStorage.instance.ref().child(auth.USER.name+"/"+ dishname);
+
+   String filePath = (await ImagePicker.pickImage(source: ImageSource.gallery)).path;
+
+   final StorageUploadTask uploadTask = storageRef.putFile(
+     File(filePath),
+     StorageMetadata(
+       contentType: "image" + '/' + ".jpg", // TODO image format
+     ),
+   );
+
+
+   final StorageTaskSnapshot downloadUrl =
+   (await uploadTask.onComplete);
+   final String url = (await downloadUrl.ref.getDownloadURL());
+   print('URL Is $url');
+
+   Firestore.instance
+       .collection('dishes')
+       .where("name", isEqualTo: auth.USER.name)
+       .snapshots()
+       .listen((data) =>
+       data.documents.forEach(
+               (doc){
+                 Firestore.instance.collection('dishes').document(doc.documentID).updateData({"pic" : url});
+           }
+       ));
+
+
+
+ }
+
+ Future<String> getImage (String image) async{
+   final StorageReference storageRef =
+   FirebaseStorage.instance.ref().child(auth.USER.name + "/" + image);
+   String httpPath = storageRef.path;
+   String uri = Uri.decodeFull(httpPath);
+   final RegExp regex = RegExp('([^?/]*\.(jpg))');
+   final String fileName = regex.stringMatch(uri);
+
+   final Directory tempDir = Directory.systemTemp;
+   final File file = File('${tempDir.path}/$fileName');
+
+   final StorageReference ref = FirebaseStorage.instance.ref().child(fileName);
+   final StorageFileDownloadTask downloadTask = ref.writeToFile(file);
+
+   final int byteNumber = (await downloadTask.future).totalByteCount;
+   print(byteNumber);
+   return "${tempDir.path}/$fileName";
+
  }
 
 
