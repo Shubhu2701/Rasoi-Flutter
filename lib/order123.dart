@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import './Product.dart';
+import './payment.dart';
 
-
-class Map extends StatelessWidget{
+class OrderSummary extends StatelessWidget{
   @override
   Widget build(BuildContext context){
     return MaterialApp(

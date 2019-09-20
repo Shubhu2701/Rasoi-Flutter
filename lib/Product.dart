@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import './payment.dart';
 
 var price;
 var descriptionBox;
@@ -81,6 +82,9 @@ class Product extends StatelessWidget{
                 icon: Icon(Icons.add_shopping_cart),
                 label: Text("Buy now"),
                 onPressed: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (context) {
+                    return Payment();
+                  }));
                 }
             )
         )

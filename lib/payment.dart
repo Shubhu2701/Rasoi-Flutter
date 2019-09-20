@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import './map.dart';
+import './order123.dart';
 
 
 class Payment extends StatelessWidget {
@@ -21,7 +21,7 @@ class Payment extends StatelessWidget {
             shape: StadiumBorder(),
             onPressed: () {
                   Navigator.push(context, MaterialPageRoute(builder: (context){
-                    return Map(); 
+                    return OrderSummary();
                   }));
 
             },
@@ -34,7 +34,7 @@ class Payment extends StatelessWidget {
             shape: StadiumBorder(),
              onPressed: () {
                   Navigator.push(context, MaterialPageRoute(builder: (context){
-                    return Map();
+                    return OrderSummary();
                   }));
 
             },
@@ -47,7 +47,7 @@ class Payment extends StatelessWidget {
             shape: StadiumBorder(),
              onPressed: () {
                   Navigator.push(context, MaterialPageRoute(builder: (context){
-                    return Map();
+                    return OrderSummary();
                   }));
             },
             child:  new Text("Bhim UPI", style: TextStyle(fontFamily: 'Manjari', fontSize: 22.0),),
