@@ -6,7 +6,7 @@ var sellerInfo;
 var review;
 var productName;
 var buyButton;
-var abc;
+var imageSource;
 
 class Product extends StatelessWidget{
 
@@ -18,11 +18,13 @@ class Product extends StatelessWidget{
           margin: const EdgeInsets.all(2.0),
           child: new Column(
             children: <Widget>[
+              new Divider(),
               new Container(
                 width: 250,
                 height: 250,
                 child: new Picture()
               ),
+              new Divider(),
               new Container(
                 child: new Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -34,10 +36,12 @@ class Product extends StatelessWidget{
                 ],
                 )
               ),
+              new Divider(),
               new Container(
                 child: new Text("Price : $price", textDirection: TextDirection.ltr,
                         style: new TextStyle(fontFamily: 'Manjari',fontWeight: FontWeight.w300,fontSize: 25.0)),
               ),
+              new Divider(),
               new Container(
                 margin: const EdgeInsets.all(10.0),
                 child: new Column(
@@ -47,6 +51,7 @@ class Product extends StatelessWidget{
                   ],
                 ),
               ),
+              new Divider(),
               new Container(
                 margin: const EdgeInsets.all(10.0),
                  child: new Column(
@@ -56,6 +61,7 @@ class Product extends StatelessWidget{
                   ],
                 )
               ),
+              new Divider(),
               new Container(
                 margin: const EdgeInsets.all(10.0),
                  child: new Column(
@@ -89,7 +95,7 @@ class Product extends StatelessWidget{
 class Picture extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
-    return new Image.network('src');
+    return new Image.network("https://cafedelites.com/wp-content/uploads/2019/01/Butter-Chicken-IMAGE-27.jpg");
   }
 }
 
