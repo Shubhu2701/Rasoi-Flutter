@@ -99,13 +99,6 @@ class Product2 extends StatelessWidget{
     );
   }
 
-  void goToPayment() {
-    {
-       Navigator.push(context, MaterialPageRoute(builder: (context){
-        return Payment();
-                  }));
-  }
-}
 }
 
 class aButton extends StatefulWidget{
@@ -171,6 +164,13 @@ class NavButton extends State<aButton>{
       ),
     );
   }
+  void goToPayment() {
+    {
+       Navigator.push(context, MaterialPageRoute(builder: (context){
+        return Payment();
+                  }));
+  }
+}
 }
 
 
