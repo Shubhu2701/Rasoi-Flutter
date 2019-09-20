@@ -1,8 +1,13 @@
 import "package:flutter/material.dart";
-
-var username = 'Username', mail = 'username@gmail.com';
+import 'package:flutter/widgets.dart';
+import './dishcard.dart';
 
 class HomeScreen extends StatelessWidget {
+  var username, mail;
+  HomeScreen(username, mail){
+    this.username= username;
+    this.mail=mail;
+  }
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -185,9 +190,15 @@ class HomeScreen extends StatelessWidget {
           color: Colors.white,
           child: ListView(
             children: <Widget>[
-              ListTile(
-                leading: Image.network("https://cafedelites.com/wp-content/uploads/2019/01/Butter-Chicken-IMAGE-27.jpg",),
-
+              Container(
+                padding: EdgeInsets.only(top: 30.0),
+              ),
+              Card(
+                child: Container(
+                  width: 200,
+                  height: 200,
+                  child: DishCard("https://cafedelites.com/wp-content/uploads/2019/01/Butter-Chicken-IMAGE-27.jpg", "Butter Chicken", "₹69", 5),
+                ),
               ),
             ],
           ),
@@ -196,3 +207,4 @@ class HomeScreen extends StatelessWidget {
     );
   }
 }
+
