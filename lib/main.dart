@@ -9,17 +9,7 @@ import "package:flutter/material.dart";
 //import './order123.dart';
 
 void main(){
-<<<<<<< HEAD
-  auth.handleSignIn();
-<<<<<<< HEAD
-  runApp(HomeScreen("Shubhu" , "shubhankermehta27@gmail.com"));
-=======
-  runApp(HomeScreen("abhinav", "abhinav@gmail.com"));
->>>>>>> a9f13ecc9c5b26ce40b776c16ee5db5e97aa261b
-=======
-//  auth.handleSignIn();
   runApp(LandingPage());
->>>>>>> 89107075cd58efbf6e70733385fc76a3b8968abe
 }
 
 class LandingPage extends StatelessWidget {

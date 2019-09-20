@@ -3,6 +3,7 @@ import './dishcard.dart';
 
 class HistoryCard extends StatelessWidget {
   HistoryCard();
+  DishCard dishCard;
 
   @override
   Widget build(BuildContext context) {
@@ -24,7 +25,7 @@ class HistoryCard extends StatelessWidget {
                     child: AspectRatio(
                       aspectRatio: 1,
                       child: Image.network(
-                        "${DishCard.url}",
+                        "${dishCard.url}",
                         alignment: Alignment.centerLeft,
                         fit: BoxFit.fill,
                       ),
@@ -36,7 +37,7 @@ class HistoryCard extends StatelessWidget {
               Column(
                 children: <Widget>[
                   Text(
-                    "${DishCard.dish}",
+                    "${dishCard.dish}",
                     textAlign: TextAlign.left,
                     style: TextStyle(
                       fontFamily: 'Manjari',
@@ -48,7 +49,7 @@ class HistoryCard extends StatelessWidget {
                   new Divider(),
                   new Divider(),
                   Text(
-                    "${DishCard.price}",
+                    "${dishCard.price}",
                     textAlign: TextAlign.left,
                     style: TextStyle(
                       fontFamily: 'Manjari',
@@ -68,7 +69,7 @@ class HistoryCard extends StatelessWidget {
 //                new Divider(),
                   new Divider(),
                   Text(
-                    "${DishCard.rating}",
+                    "${dishCard.rating}",
                     style: TextStyle(
                       fontFamily: 'Manjari',
                       fontWeight: FontWeight.w100,

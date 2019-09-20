@@ -1,20 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:rasoi/Dish.dart';
 import './Product.dart';
 
 
 
 class DishCard extends StatelessWidget {
-<<<<<<< HEAD
-
-  static var url, dish, price, rating;
-
-  DishCard(url, dish, price, rating) {
-    DishCard.url = url;
-    DishCard.dish = dish;
-    DishCard.price = price;
-    DishCard.rating = rating;
-=======
-  var url, dish, price, rating,docid;
+   var url, dish, price, rating,docid;
 
   DishCard(url, dish, price, rating,docid) {
     this.url = url;
@@ -22,7 +13,7 @@ class DishCard extends StatelessWidget {
     this.price = price;
     this.rating = rating;
     this.docid = docid;
->>>>>>> 89107075cd58efbf6e70733385fc76a3b8968abe
+
   }
 
   @override

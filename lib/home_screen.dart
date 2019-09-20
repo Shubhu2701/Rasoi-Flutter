@@ -198,29 +198,6 @@ class HomeScreen extends StatelessWidget {
             builder: (context, snapshot){
               if (!snapshot.hasData) return LinearProgressIndicator();
 
-<<<<<<< HEAD
-              Card(
-                child: Container(
-                  width: 200,
-                  height: 200,
-                  child: DishCard(
-                      "https://cafedelites.com/wp-content/uploads/2019/01/Butter-Chicken-IMAGE-27.jpg",
-                      "Butter Chicken",
-                      "₹69",
-                      5),
-                  
-                ),
-              ),
-
-
-              DishCard(
-                  "https://cafedelites.com/wp-content/uploads/2019/01/Butter-Chicken-IMAGE-27.jpg",
-                  "Butter Chicken",
-                  "₹69",
-                  5),
-
-            ],
-=======
               return ListView.builder(
                 itemCount: snapshot.data.documents.length,
                 itemBuilder: (context, index) {
@@ -233,7 +210,6 @@ class HomeScreen extends StatelessWidget {
                 );
               },);
             },
->>>>>>> 89107075cd58efbf6e70733385fc76a3b8968abe
           ),
         ),
       ),
