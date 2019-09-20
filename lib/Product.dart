@@ -28,7 +28,7 @@ class Product extends StatelessWidget{
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: <Widget>[
                   new Text("$productName", textDirection: TextDirection.ltr,
-                            style: new TextStyle(fontFamily: 'Manjari', fontWeight: FontWeight.w700,fontSize: 50.0)),
+                            style: new TextStyle(fontFamily: 'Manjari', fontWeight: FontWeight.w500,fontSize: 50.0)),
                   new Text("Rating: 4.5"),
                   new Icon(Icons.star)
                 ],
@@ -36,13 +36,13 @@ class Product extends StatelessWidget{
               ),
               new Container(
                 child: new Text("Price : $price", textDirection: TextDirection.ltr,
-                        style: new TextStyle(fontFamily: 'Manjari',fontWeight: FontWeight.w700,fontSize: 37.5)),
+                        style: new TextStyle(fontFamily: 'Manjari',fontWeight: FontWeight.w300,fontSize: 35.0)),
               ),
               new Container(
                 margin: const EdgeInsets.all(10.0),
                 child: new Column(
                   children: <Widget>[
-                    new Text("Description: ", textDirection: TextDirection.ltr, style: TextStyle(fontFamily: 'Manjiri', fontWeight: FontWeight.w700,fontSize: 35.0)),
+                    new Text("Description: ", textDirection: TextDirection.ltr, style: TextStyle(fontFamily: 'Manjiri', fontWeight: FontWeight.w300,fontSize: 35.0)),
                     new Text("$descriptionBox", textDirection: TextDirection.ltr, style: TextStyle(fontFamily: 'Manjiri', fontSize: 18.0))
                   ],
                 ),
@@ -51,7 +51,7 @@ class Product extends StatelessWidget{
                 margin: const EdgeInsets.all(10.0),
                  child: new Column(
                   children: <Widget>[
-                    new Text("Seller info: ", textDirection: TextDirection.ltr, style: TextStyle(fontFamily: 'Manjiri', fontWeight: FontWeight.w700,fontSize: 35.0)),
+                    new Text("Seller info: ", textDirection: TextDirection.ltr, style: TextStyle(fontFamily: 'Manjiri', fontWeight: FontWeight.w300,fontSize: 35.0)),
                     new Text("$sellerInfo", textDirection: TextDirection.ltr, style: TextStyle(fontFamily: 'Manjiri', fontSize: 18.0))
                   ],
                 )
