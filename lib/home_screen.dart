@@ -3,6 +3,7 @@ import "package:flutter/material.dart";
 import 'package:flutter/widgets.dart';
 import 'package:rasoi/Dish.dart';
 import './dishcard.dart';
+import 'History.dart';
 
 class HomeScreen extends StatelessWidget {
   var username, mail;
@@ -14,7 +15,7 @@ class HomeScreen extends StatelessWidget {
   }
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext _context) {
     return MaterialApp(
       theme: new ThemeData(primaryColor: Colors.white),
       debugShowCheckedModeBanner: false,
@@ -63,7 +64,9 @@ class HomeScreen extends StatelessWidget {
                     color: Colors.black,
                   ),
                 ),
-                onTap: () {},
+                onTap: () {
+                  Navigator.of(_context).push(MaterialPageRoute(builder: (context)=> PastOrders()));
+                },
               ),
               new Divider(),
               ListTile(

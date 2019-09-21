@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import './payment.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 
+String url;
 
 class Product extends StatelessWidget {
 
@@ -51,6 +52,7 @@ class Product extends StatelessWidget {
       String descriptionBox = snapshot.data.data["Desc"];
       String sellerInfo = snapshot.data.data["sellerID"];
       String productName = snapshot.data.data["name"];
+      url = snapshot.data.data["pic"];
       String buyButton;
       String imageSource;
 
@@ -140,8 +142,7 @@ class Product extends StatelessWidget {
 class Picture extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return new Image.network(
-        "https://cafedelites.com/wp-content/uploads/2019/01/Butter-Chicken-IMAGE-27.jpg");
+    return new Image.network(url);
   }
 }
 
